@@ -1,68 +1,80 @@
-# Recipe Finder
+# Recipe Finder Vibe
 
-A full-stack web application that allows users to search for, create, and share recipes. Built with the MERN stack (MongoDB, Express.js, React.js, and Node.js).
-
-## Features
-
-- User authentication (register, login, logout)
-- Create, read, update, and delete recipes
-- Search recipes by title, description, or cuisine
-- Upload recipe images
-- Detailed recipe view with ingredients and instructions
-- Responsive design
+A MERN stack application for finding, creating, and sharing recipes.
 
 ## Prerequisites
 
 - Node.js (v14 or higher)
 - MongoDB (v4.4 or higher)
-- npm or yarn
+- npm (comes with Node.js)
 
 ## Installation
 
 1. Clone the repository:
-```bash
-git clone <repository-url>
-cd recipe-finder
-```
+   ```bash
+   git clone https://github.com/Abhi2004-cloud/recipe-finder-vibe.git
+   cd recipe-finder-vibe
+   ```
 
-2. Install server dependencies:
-```bash
-cd server
-npm install
-```
+2. Install backend dependencies:
+   ```bash
+   cd server
+   npm install
+   ```
 
-3. Install client dependencies:
-```bash
-cd ../client
-npm install
-```
+3. Install frontend dependencies:
+   ```bash
+   cd client
+   npm install
+   ```
 
 ## Configuration
 
-1. Create a `.env` file in the server directory with the following content:
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/recipefindervibe
-JWT_SECRET=your-secret-key
-```
+1. Start MongoDB:
+   - Make sure MongoDB is installed and running on your system
+   - Default connection string: `mongodb://localhost:27017/recipefindervibe`
 
-2. Make sure MongoDB is running on your local machine.
+2. Create uploads directory:
+   ```bash
+   mkdir server/uploads
+   ```
 
 ## Running the Application
 
-1. Start the server:
-```bash
-cd server
-npm start
-```
+1. Start the backend server:
+   ```bash
+   cd server
+   npm start
+   ```
+   The server will run on http://localhost:5000
 
-2. Start the client:
-```bash
-cd client
-npm start
-```
+2. Start the frontend (in a new terminal):
+   ```bash
+   cd client
+   npm start
+   ```
+   The frontend will open automatically in your browser at http://localhost:3000
 
-3. Open your browser and navigate to `http://localhost:3000`
+## Features
+
+- User authentication (Register/Login)
+- Create, read, update, and delete recipes
+- Upload recipe images
+- View all recipes
+- Search and filter recipes
+- Responsive design
+
+## Technologies Used
+
+- Frontend: React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JWT
+- Image Upload: Multer
+
+## Note
+
+Make sure both MongoDB and the server are running before accessing the frontend application.
 
 ## Project Structure
 
@@ -97,22 +109,6 @@ recipe-finder/
 - POST /api/recipes - Create a new recipe
 - PUT /api/recipes/:id - Update a recipe
 - DELETE /api/recipes/:id - Delete a recipe
-
-## Technologies Used
-
-- Frontend:
-  - React.js
-  - Material-UI
-  - Axios
-  - React Router
-
-- Backend:
-  - Node.js
-  - Express.js
-  - MongoDB
-  - Mongoose
-  - JWT Authentication
-  - Multer (file upload)
 
 ## Contributing
 
